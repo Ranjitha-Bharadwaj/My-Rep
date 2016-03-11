@@ -1,4 +1,4 @@
 # My-Rep
 My Work area
 
-Hello all
+Hello all! This is fun. :)
