@@ -1,0 +1,71 @@
+<!doctype html>
+<head>
+  
+  <link rel="stylesheet"
+       href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"/>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script>
+    $(function(){
+	  $("#brands").accordion();
+	  $("li").draggable({
+	  appendTo:"body",
+	  helper:"clone"
+	  });
+	  $("#cart").droppable({
+        drop:function(event,ui){
+		  $( "<li></li>" ).text( ui.draggable.text() ).appendTo( this );
+		  }
+		});
+
+	});
+	</script>
+	<style>
+	  #title{
+	         text-align:center;
+			 text-decoration:underline;
+			 font-weight:bold;
+			 font-size:200%;
+			 border: 5px solid grey;
+			 }
+	</style>
+<div id="title" style="color:blue">Online Jeans Shop</div>
+<div id="brands">
+  <h3><a href = "#">Wrangler</a></h3>
+	<div>
+	  <ul>
+	    <li>Men's Slim Fit Size 34</li>
+		<li>Men's Slim Fit Size 38</li>
+		<li>Women's Skinny Fit Size 30</li>
+	  </ul>
+	  </div>
+  <h3><a href ="#">Levi's</a></h3>
+    <div>
+	  <ul>
+	    <li>Men's Slim Fit Size 34</li>
+		<li>Men's Slim Fit Size 38</li>
+		<li>Women's Skinny Fit Size 30</li>
+	  </ul>
+	  </div>
+  <h3><a href ="#">Cherokee</a></h3>
+  	<div>
+	  <ul>
+	    <li>Men's Slim Fit Size 34</li>
+		<li>Men's Slim Fit Size 38</li>
+		<li>Women's Skinny Fit Size 30</li>
+	  </ul>
+	  </div>
+  <h3><a href ="#">Lee</a></h3>
+  	<div>
+	  <ul>
+	    <li>Men's Slim Fit Size 34</li>
+		<li>Men's Slim Fit Size 38</li>
+		<li>Women's Skinny Fit Size 30</li>
+	  </ul>
+	  </div>
+</div>
+<div id="cart">
+ <p>Add your items here</p>
+</div>
+</body>
+</html>
